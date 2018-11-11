@@ -1,0 +1,92 @@
+﻿
+.site-header {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #24282C url('/assets/images/adi-constantin-65004-unsplash.jpg') no-repeat center center;
+    background-size: cover;
+
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .2);
+    }
+
+    .navbar {
+        position: relative;
+        z-index: 2;
+        margin: 0 auto;
+        width: 1200px;
+        height: 80px;
+        // background-color: #24282C;
+        overflow: hidden;
+
+        .logo {
+            float: left;
+
+            .text-logo {
+                font-size: 24px;
+                line-height: 80px;
+
+                a {
+                    color: #fff;
+
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+
+        .top-menu {
+            float: right;
+            margin-left: 100px;
+        }
+
+        li {
+            float: left;
+            font-size: 14px;
+
+            a {
+                display: block;
+                padding: 0 20px;
+                line-height: 80px;
+                color: #fff;
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+
+        .top-login {
+            display: none;
+            float: right;
+        }
+    }
+
+    .site-info {
+        position: relative;
+        margin-top: -80px;
+        height: 100%;
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .title {
+            font-size: 50px;
+        }
+
+        .description {
+            font-size: 16px;
+        }
+    }
+}
