@@ -17,6 +17,9 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include="dist\assets\images\adi-constantin-65004-unsplash.jpg" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\Web.config" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="webpack.config.js" />
@@ -40,6 +43,9 @@
   <ItemGroup>
     <Folder Include="assets" />
     <Folder Include="assets\images" />
+    <Folder Include="dist\" />
+    <Folder Include="dist\assets\" />
+    <Folder Include="dist\assets\images\" />
     <Folder Include="src" />
     <Folder Include="src\components" />
     <Folder Include="src\components\layout" />
@@ -57,6 +63,9 @@
     <Folder Include="src\scenes\products\scss" />
     <Folder Include="src\scss" />
     <Folder Include="src\services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dist\index-bundle.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
