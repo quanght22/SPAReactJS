@@ -32,7 +32,8 @@ module.exports = {
   resolve: {
     alias: {
         scenes: path.resolve(__dirname, 'src/scenes/'),
-        layout: path.resolve(__dirname, 'src/components/layout/')
+        layout: path.resolve(__dirname, 'src/components/layout/'),
+        services: path.resolve(__dirname, 'src/services/')
     },
     extensions: ['.js', '.jsx', '.json', '.scss']
 }

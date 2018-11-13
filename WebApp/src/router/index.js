@@ -1,6 +1,6 @@
 ﻿import Home from 'scenes/home';
 import About from 'scenes/about';
-import Products from 'scenes/products';
+import Customers from 'scenes/customers';
 import Contact from 'scenes/contact';
 const routes = [
     {
@@ -13,8 +13,8 @@ const routes = [
        component: About
     },
     {
-       path: '/products',
-       component: Products
+        path: '/customers',
+        component: Customers
     },
     {
        path: '/contact',

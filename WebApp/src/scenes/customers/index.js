@@ -1,18 +1,18 @@
-import './scss/products.scss';
+import './scss/customers.scss';
 
 import React, { Component } from 'react';
 import {Content} from 'layout';
 
-class Products extends Component {
+class Customers extends Component {
   render() {
     return (
       <div>
         <Content>
-          <div className="products placeholder">Products</div>
+           <div className="customers placeholder">Customers</div>
         </Content>
       </div>
     );
   }
 }
 
-export default Products;
+export default Customers;

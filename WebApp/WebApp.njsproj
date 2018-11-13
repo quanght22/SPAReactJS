@@ -22,13 +22,14 @@
     <Content Include="dist\Web.config" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
+    <Content Include="src\scenes\customers\scss\customers.scss" />
     <Content Include="webpack.config.js" />
     <Content Include="src\index.html" />
     <Content Include="src\App.js" />
     <Content Include="src\index.js" />
     <Content Include="assets\images\adi-constantin-65004-unsplash.jpg" />
     <Content Include="src\router\index.js" />
-    <Content Include="src\services\httpService.js" />
+    <Content Include="src\services\baseService.js" />
     <Content Include="src\services\utils.js" />
     <Content Include="src\components\layout\content.js" />
     <Content Include="src\components\layout\footer.js" />
@@ -38,7 +39,7 @@
     <Content Include="src\scenes\about\index.js" />
     <Content Include="src\scenes\contact\index.js" />
     <Content Include="src\scenes\home\index.js" />
-    <Content Include="src\scenes\products\index.js" />
+    <Content Include="src\scenes\customers\index.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets" />
@@ -51,6 +52,8 @@
     <Folder Include="src\components\layout" />
     <Folder Include="src\components\layout\scss" />
     <Folder Include="src\components\scss" />
+    <Folder Include="src\scenes\store\" />
+    <Folder Include="src\store\" />
     <Folder Include="src\router" />
     <Folder Include="src\scenes" />
     <Folder Include="src\scenes\about" />
@@ -59,13 +62,26 @@
     <Folder Include="src\scenes\contact\scss" />
     <Folder Include="src\scenes\home" />
     <Folder Include="src\scenes\home\scss" />
-    <Folder Include="src\scenes\products" />
-    <Folder Include="src\scenes\products\scss" />
+    <Folder Include="src\scenes\customers\store\" />
+    <Folder Include="src\scenes\services\" />
+    <Folder Include="src\scenes\customers\" />
+    <Folder Include="src\scenes\customers\scss\" />
     <Folder Include="src\scss" />
     <Folder Include="src\services" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dist\index-bundle.js" />
+    <Compile Include="src\scenes\store\index.js" />
+    <Compile Include="src\store\reducers.js" />
+    <Compile Include="src\store\index.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\scenes\customers\store\action.js" />
+    <Compile Include="src\scenes\customers\store\index.js" />
+    <Compile Include="src\scenes\customers\store\reducer.js" />
+    <Compile Include="src\scenes\services\userService.js">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->

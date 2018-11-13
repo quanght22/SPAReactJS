@@ -11,7 +11,7 @@ const Header = () => (
             <ul className="top-menu">
                 <li><Link to="/">HOME</Link></li>
                 <li><Link to="/about">ABOUT US</Link></li>
-                <li><Link to="/products">PRODUCTS</Link></li>
+                <li><Link to="/customers">CUSTOMERS</Link></li>
                 <li><Link to="/contact">CONTACT US</Link></li>
             </ul>
             {/* <ul className="top-menu top-login">
