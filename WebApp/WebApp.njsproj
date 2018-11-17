@@ -52,6 +52,7 @@
     <Folder Include="src\components\layout" />
     <Folder Include="src\components\layout\scss" />
     <Folder Include="src\components\scss" />
+    <Folder Include="src\scenes\home\store\" />
     <Folder Include="src\scenes\store\" />
     <Folder Include="src\store\" />
     <Folder Include="src\router" />
@@ -71,6 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dist\index-bundle.js" />
+    <Compile Include="src\scenes\home\store\action.js" />
+    <Compile Include="src\scenes\home\store\index.js" />
+    <Compile Include="src\scenes\home\store\reducer.js" />
     <Compile Include="src\scenes\store\index.js" />
     <Compile Include="src\store\reducers.js" />
     <Compile Include="src\store\index.js">

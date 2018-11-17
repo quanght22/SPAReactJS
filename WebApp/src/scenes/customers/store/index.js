@@ -1,3 +1,2 @@
-﻿import { reducer as customersReducer }  from './reducer';
-
+﻿import { default as customersReducer  } from './reducer';
 export default customersReducer;
