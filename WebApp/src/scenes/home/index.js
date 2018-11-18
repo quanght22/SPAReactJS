@@ -2,26 +2,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { getProducts } from './store/action';
+import { getCustomers } from './store/action';
 import { Content } from 'layout';
 
 const mapStateToProps = (state) => {
-    return { products: state.scenesStore.productsReducer.products };
+    return { customers: state.scenesStore.customersReducer.customers };
 };
 const mapDispatch = dispatch => ({
-    getProducts: () => dispatch(getProducts())
+    getCustomers: () => dispatch(getCustomers())
 });
 class Home extends Component {
     componentWillMount() {
-        this.props.getProducts();
+        this.props.getCustomers();
     }
     render() {
+        console.log('this.props.customers', this.props.customers);
         return (
             <div>
                 <Content>
                     <div className="placeholder">
-                        {this.props.products.map((product,index) => (
-                            <span key={index}> {product}</span>
+                        {this.props.customers.map((customer) => (
+                            <span key={customer.id}> {customer.email}</span>
                         ))}
                         </div>
                 </Content>

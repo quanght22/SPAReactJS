@@ -3,16 +3,15 @@ export default class BaseService {
     constructor() {
         this.baseService = this.initAxios();
     };
-    initAxios(){
+    initAxios() {
         const baseService = axios.create({
             baseURL: 'https://localhost:44328', // apiPoints.baseUrl,
             withCredentials: false,
             headers: {
-                Accept: 'application/json',
+                'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json'
             }
         });
-
         baseService.interceptors.request.use(
             config => {
                 return config;
@@ -33,14 +32,23 @@ export default class BaseService {
         return baseService;
     };
     get(url, params) {
-        if (!!params) {
-           return this.baseService.get(url, params);
-        } else {
-           return this.baseService.get(url);
-        }
+        //return axios.get('https://localhost:44328' + url, {
+        //    headers: {
+        //        'Access-Control-Allow-Origin': '*',
+        //        'Content-Type': 'application/json',
+        //        'withCredentials': true,
+        //        'crossDomain': true },
+        //}).then(res => {
+        //    console.log(res);
+
+        //}).catch(error => {
+        //    console.log('erro', error);
+        //});
+
+        if (!!params) return this.baseService.get(url, params);
+        return this.baseService.get(url);
     }
     post(url, params) {
-        let apiURL = this.getApiURL(url);
-        return this.baseService.post(apiURL, params);
+        return this.baseService.post(url, params);
     }
 }
