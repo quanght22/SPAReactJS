@@ -1,4 +1,5 @@
 ﻿import { types } from "./action";
+import { debug } from "util";
 const initialState = {
     products: []
 };
@@ -8,7 +9,7 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 products: action.products
-            };
+            }; 
         default:
             return state;
     }

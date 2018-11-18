@@ -1,32 +1,36 @@
 ﻿import './scss/home.scss';
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import { getProducts } from './store/action';
 import { Content } from 'layout';
 
-const mapState = state => ({
-    products: state.products
-});
+const mapStateToProps = (state) => {
+    return { products: state.scenesStore.productsReducer.products };
+};
 const mapDispatch = dispatch => ({
     getProducts: () => dispatch(getProducts())
 });
 class Home extends Component {
-    static propTypes = {
-        products: ProTypes.Object
-    }
     componentWillMount() {
-        getProducts();
+        this.props.getProducts();
     }
     render() {
         return (
             <div>
                 <Content>
-                    <div className="placeholder">Home Content</div>
+                    <div className="placeholder">
+                        {this.props.products.map((product,index) => (
+                            <span key={index}> {product}</span>
+                        ))}
+                        </div>
                 </Content>
             </div>
         );
     }
 }
+
 export default connect(
-    mapState,
+    mapStateToProps,
     mapDispatch
 )(Home);
